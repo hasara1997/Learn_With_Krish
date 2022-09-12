@@ -1,0 +1,30 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+    
+ <%
+ if(application.getAttribute("db") == null){
+	 DB db = new DB();
+	 application.setAttribute("db", db);
+ }
+ %>   
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>User Registration</title>
+</head>
+<body>
+    <form method="POST" action="SignUp">
+      <span>Email</span>
+      <input type="text" name="email" placeholder="Enter Email" />
+      <br/>
+      <span>User Name</span>
+      <input type="text" name="username" placeholder="Enter User Name" />
+      <br/>
+      <span>Password</span>
+      <input type="password" name="password" placeholder="Enter Password" />
+      <br/>
+      <input type="submit" value="Submit"/> 
+    </form>
+</body>
+</html>
